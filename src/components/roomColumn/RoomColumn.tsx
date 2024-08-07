@@ -30,7 +30,7 @@ const RoomColumn: React.FC<RoomColumnProps> = memo(({ roomName, slots }) => {
 
   return (
     <Col md={6} className={styles['room-column']}>
-      <h2>{roomName}</h2>
+      <h3>{roomName}</h3>
       {Object.entries(groupedSlots).map(([date, slots]) => (
         <div key={date}>
           <h4 className={styles['date-header']}>{formatDate(date)}</h4>
