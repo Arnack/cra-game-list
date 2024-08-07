@@ -15,6 +15,7 @@ h2 {
 
 .card {
   border: none;
+  margin-bottom: 10px;
 }
 
 .card-body {
@@ -25,8 +26,25 @@ h2 {
 
 h4 {
   margin-bottom: 15px;
+  padding: 10px;
+  background-color: #343a40;
+  color: #fff;
+  border-radius: 0.25rem;
 }
 
 .font-weight-bold {
   font-weight: 700 !important;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 }
