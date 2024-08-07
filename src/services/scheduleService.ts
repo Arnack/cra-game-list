@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Room, Schedule, ScheduleSlot } from '../interfaces';
+import { Room, Schedule, ScheduleSlot } from '../model/interfaces';
 import { mockRooms, mockSchedule } from '../mockData';
 
 const API_ROOMS_URL = 'https://app.plai.win/api/job-test/rooms';

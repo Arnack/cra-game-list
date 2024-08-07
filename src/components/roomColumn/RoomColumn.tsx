@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Col } from 'react-bootstrap';
-import { ScheduleSlot } from '../interfaces';
-import ScheduleSlotComponent from './ScheduleSlot';
+import { ScheduleSlot } from '../../model/interfaces';
+import ScheduleSlotComponent from '../scheduleSlot/ScheduleSlot';
 import styles from './RoomColumn.module.scss';
 
 interface RoomColumnProps {
@@ -10,7 +10,7 @@ interface RoomColumnProps {
   slots: ScheduleSlot[];
 }
 
-const RoomColumn: React.FC<RoomColumnProps> = ({ roomId, roomName, slots }) => {
+const RoomColumn: React.FC<RoomColumnProps> = memo(({ roomName, slots }) => {
   const formatDate = (date: string) => {
     return new Date(date).toLocaleDateString();
   };
@@ -41,6 +41,6 @@ const RoomColumn: React.FC<RoomColumnProps> = ({ roomId, roomName, slots }) => {
       ))}
     </Col>
   );
-};
+});
 
 export default RoomColumn;

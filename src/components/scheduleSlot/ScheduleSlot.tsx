@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
-import { ScheduleSlot } from '../interfaces';
+import { ScheduleSlot } from '../../model/interfaces';
 import styles from './ScheduleSlot.module.scss';
 
 interface ScheduleSlotProps {
   slot: ScheduleSlot;
 }
 
-const ScheduleSlotComponent: React.FC<ScheduleSlotProps> = ({ slot }) => {
+const ScheduleSlotComponent: React.FC<ScheduleSlotProps> = memo(({ slot }) => {
   const formatTime = (time: string) => {
     const date = new Date(time);
     return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -25,6 +25,6 @@ const ScheduleSlotComponent: React.FC<ScheduleSlotProps> = ({ slot }) => {
       </Card.Body>
     </Card>
   );
-};
+});
 
 export default ScheduleSlotComponent;
